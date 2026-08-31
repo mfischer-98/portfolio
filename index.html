@@ -15,21 +15,37 @@
 		</header>
 		<main>
 			<!-- Welcome window -->
-			<p>welcome.exe</p>
-			<button type="button">X</button>
-			<h2>Hey there! My name is Melissa and welcome to my portfolio.</h2>
-			<p>Feel free to click on the icons and explore ✨</p>
-			<button type="button">Let's go!</button>
+			<section class="welcome-window">
+				<section class="window-top-bar">
+					<section class="window-title">
+						<p>welcome.exe</p>
+						</section>
+					<section class="close-button">
+						<button type="button">X</button>
+						</section>
+				</section>
+				<section class="welcome-content">
+					<h2>Hey there! My name is Melissa and welcome to my portfolio.</h2>
+					<p>Feel free to click on the icons and explore ✨</p>
+					</section>
+				<section class="welcome-button">
+					<button type="button">Let's go!</button>
+				</section>
+			</section>
 
 			<!-- Navigation Icons -->
-			<img src="images/icons/rep_projects.png" alt="">
-			<img src="images/icons/rep_profile.png" alt="">
-			<img src="images/icons/rep_resume.png" alt="">
-			<img src="images/icons/rep_contact.png" alt="">
+			<section class="background-icons">
+				<img src="images/icons/rep_projects.png" alt="">
+				<img src="images/icons/rep_profile.png" alt="">
+				<img src="images/icons/rep_resume.png" alt="">
+				<img src="images/icons/rep_contact.png" alt="">
+			</section>
 
 			<!-- Projects window -->
+			<section class="project hidden">
 			<p>Projects</p>
 			<button type="button">X</button>
+
 			<!-- Project card -->
 			<img src="images/rep_project_img.jpg" alt="">
 			<h3>Cube3D</h3>
@@ -46,20 +62,26 @@
 			<img src="images/rep_project_img.jpg" alt="">
 			<h3>Last feather</h3>
 			<p>Project description</p>
+			</section> 
 
+			<section class="profile hidden">
 			<!-- Profile window -->
 			<p>About me</p>
 			<button type="button">X</button>
 			<img src="images/rep_aboutme.jpg" alt="">
 			<p>... I am ...</p>
-
+			</section> 
 
 			<!-- Resume window -->
+			<section class="resume hidden">
 			<p>My resume</p>
 			<button type="button">X</button>
+			<iframe class="pdf" src="docs/resume.pdf"></iframe>
 			<img src="images/icons/rep_download.png" alt="">
+			</section> 
 
 			<!-- Contact window -->
+			<section class="contact hidden">
 			<p>Get in touch</p>
 			<button type="button">X</button>
 			<form>
@@ -72,6 +94,7 @@
 				<input type="button" value="Send">
 			</form>
 			<!-- Later add message bubble appearing -->
+			</section>
 		</main>
 
 		<nav>
