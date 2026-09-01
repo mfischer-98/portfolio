@@ -42,57 +42,128 @@
 			</section>
 
 			<!-- Projects window -->
-			<section class="project hidden">
-			<p>Projects</p>
-			<button type="button">X</button>
+			<section class="project-window">
+				<section class="window-top-bar">
+					<section class="window-title">
+						<p>My projects</p>
+					</section>
+					<section class="close-button">
+						<button type="button">X</button>
+					</section>
+				</section>
 
+			<section class="project-content">
 			<!-- Project card -->
-			<img src="images/rep_project_img.jpg" alt="">
-			<h3>Cube3D</h3>
-			<p>Project description</p>
-		
-			<img src="images/rep_project_img.jpg" alt="">
-			<h3>Minishell</h3>
-			<p>Project description</p>
+				<article class="project-card">
+					<img src="images/rep_project_img.jpg" alt="">
+					<h3>Cube3D</h3>
+					<p>Project description</p>
+				</article>
+			
+				<article class="project-card">
+					<img src="images/rep_project_img.jpg" alt="">
+					<h3>Minishell</h3>
+					<p>Project description</p>
+				</article>
 
-			<img src="images/rep_project_img.jpg" alt="">
-			<h3>Philosophers</h3>
-			<p>Project description</p>
+				<article class="project-card">
+				<img src="images/rep_project_img.jpg" alt="">
+				<h3>Philosophers</h3>
+				<p>Project description</p>
+				</article>
 
-			<img src="images/rep_project_img.jpg" alt="">
-			<h3>Last feather</h3>
-			<p>Project description</p>
+				<article class="project-card">
+				<img src="images/rep_project_img.jpg" alt="">
+				<h3>Last feather</h3>
+				<p>Project description</p>
+				</article>
+			</section>	
+			<section class="project-dots" aria-label="Project pages">
+				<button class="project-dot active" type="button" aria-label="Project page 1"></button>
+				<button class="project-dot" type="button" aria-label="Project page 2"></button>
+				<button class="project-dot" type="button" aria-label="Project page 3"></button>
+			</section>
 			</section> 
 
-			<section class="profile hidden">
+			<section class="profile-window hidden">
 			<!-- Profile window -->
-			<p>About me</p>
-			<button type="button">X</button>
-			<img src="images/rep_aboutme.jpg" alt="">
-			<p>... I am ...</p>
-			</section> 
+				<section class="window-top-bar">
+					<section class="window-title">
+						<p>About me</p>
+					</section>
+					<section class="close-button">
+						<button type="button">X</button>
+					</section>
+				</section>
+				<section class="profile-content">
+				<img src="images/rep_aboutme.jpg" alt="">
+					<section class="profile-text">
+						<p> I'm a <span class="bold-text">creative developer</span> who loves crafting pretty and functional <span class="pink-text"><span class="bold-text">digital experiences</span></span>.</p>
+						<p> When I'm not coding, you'll find me drawing, gaming or exploring new places. </p>
+						<p><span class="bold-text">Let's build something amazing together! <span class="pink-text">♡</span></span></p>
+					</section>
+				</section>
+				</section>
+			</section>
 
 			<!-- Resume window -->
-			<section class="resume hidden">
-			<p>My resume</p>
-			<button type="button">X</button>
-			<iframe class="pdf" src="docs/resume.pdf"></iframe>
-			<img src="images/icons/rep_download.png" alt="">
+			<section class="resume-window hidden">
+				<section class="window-top-bar">
+					<section class="window-title">
+						<p>My resume</p>
+					</section>
+					<section class="close-button">
+						<button type="button">X</button>
+					</section>
+				</section>
+				<section class="resume-content">
+					<iframe class="pdf" src="docs/resume.pdf" title="Melissa's resume">Your browser cannot display this PDF.</iframe>
+					<a class="download-button" href="docs/resume.pdf" download>Download resume ↓</a>
+				 </section>
 			</section> 
 
 			<!-- Contact window -->
-			<section class="contact hidden">
-			<p>Get in touch</p>
-			<button type="button">X</button>
-			<form>
-				<label for="name">Your name:</label><br>
-				<input type="text" id="name" name="fname"><br>
-				<label for="email">Your e-mail:</label><br>
-				<input type="text" id="email" name="email"><br>
-				<label for="message">Message:</label><br>
-				<input type="text" id="message" name="message"><br>
-				<input type="button" value="Send">
-			</form>
+			<section class="contact-window">
+				<section class="window-top-bar">
+					<section class="window-title">
+						<p>Get in touch</p>
+					</section>
+					<section class="close-button">
+						<button type="button">X</button>
+					</section>
+				</section>
+				<section class="contact-content">
+					 <section class="contact-status">
+						<span class="status-dot"></span>
+
+						<section>
+							<strong>Melissa</strong>
+							<p>Available</p>
+						</section>
+						</section>
+
+						<section class="chat-messages">
+						<p class="chat-bubble chat-bubble-sent">
+							Hi! I love your work ✨
+						</p>
+
+						<p class="chat-bubble chat-bubble-received">
+							Thank you so much! I'd love to hear about any opportunities.
+						</p>
+						</section>
+						<section class="contact-form">
+							<form>
+								<label for="name">Your name:</label><br>
+								<input type="text" id="name" name="fname"><br>
+								<label for="email">Your e-mail:</label><br>
+								<input type="text" id="email" name="email"><br>
+								<label for="message">Message:</label><br>
+								<input type="text" id="message" name="message"><br>
+								<button type="submit">Send message ➤</button>
+							</form>
+							</section>
+					</section>
+				</section>
 			<!-- Later add message bubble appearing -->
 			</section>
 		</main>

@@ -66,19 +66,22 @@ header img {
 	height: 40px;
 }
 
+/* clamp allows vlaues to scale and justify-content spreads the icons through the available vertical space*/
 .background-icons {
 	display: flex;
 	flex-direction: column;
-	gap: 70px;
-	position: absolute;
-	top: 300px;
-	left: 80px;
+	justify-content: space-between;
+	position: fixed;
+	top: clamp(90px, 13vh, 160px);
+	bottom: 200px;
+	left: clamp(18px, 5vw, 80px);
 }
 
 .background-icons img {
-	width: 100px;
+	width: clamp(55px, 9vh, 100px);
 	height: auto;
 	object-fit: contain;
+	cursor: pointer;
 }
 
 .welcome-window {
@@ -178,6 +181,281 @@ header img {
 
 .welcome-button button:hover {
 	color: var(--accent-pink-dark);
+}
+
+.profile-window {
+	position: absolute;
+	top: 120px;
+	left: 1000px;
+	width: 493px;
+	min-height: 360px;
+
+	background-color: var(--window-background);
+	border: 1px solid var(--border-pink);
+	border-radius: 14px;
+	box-shadow: 0 10px 25px var(--shadow-pink);
+	overflow: hidden;
+}
+
+.profile-content {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+	padding: 20px 18px 28px;
+}
+
+.profile-content img {
+	flex: 0 0 218px;
+	width: 218px;
+	height: 245px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.profile-text {
+	flex: 1;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.profile-text p {
+	margin: 0 0 18px;
+}
+
+.resume-window {
+	position: fixed;
+	top: 47%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 1200px;
+	height: 1100px;
+
+	background-color: var(--window-background);
+	border: 1px solid var(--border-pink);
+	border-radius: 14px;
+	box-shadow: 0 10px 25px var(--shadow-pink);
+	overflow: hidden;
+}
+
+.resume-content {
+	height: calc(100% - 42px);
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	padding: 18px;
+}
+
+.pdf {
+	width: 100%;
+	flex: 1;
+	min-height: 0;
+	border: 1px solid var(--border-pink);
+	border-radius: 8px;
+}
+
+.download-button {
+	align-self: center;
+	padding: 10px 22px;
+
+	color: var(--text-dark);
+	background-color: var(--accent-pink-light);
+	border: 1px solid var(--border-pink);
+	border-radius: 999px;
+
+	font-family: inherit;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.download-button:hover {
+	background-color: var(--accent-pink);
+	color: white;
+}
+
+.contact-window {
+	position: absolute;
+	top: 300px;
+	right: 80px;
+	width: 340px;
+
+	background-color: var(--window-background);
+	border: 1px solid var(--border-pink);
+	border-radius: 14px;
+	box-shadow: 0 10px 25px var(--shadow-pink);
+	overflow: hidden;
+}
+
+.contact-content {
+	padding: 18px;
+}
+
+.contact-status {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 18px;
+}
+
+.contact-status p {
+	margin: 3px 0 0;
+	color: var(--text-soft);
+	font-size: 12px;
+}
+
+.status-dot {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: var(--accent-pink);
+	border: 2px solid var(--accent-pink-light);
+}
+
+.chat-messages {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.chat-bubble {
+	max-width: 82%;
+	margin: 0;
+	padding: 10px 12px;
+	border: 1px solid var(--border-pink);
+	border-radius: 8px;
+	font-size: 13px;
+	line-height: 1.4;
+}
+
+.chat-bubble-sent {
+	align-self: flex-end;
+	background-color: var(--accent-pink-light);
+	text-align: right;
+}
+
+.chat-bubble-received {
+	align-self: flex-start;
+	background-color: white;
+}
+
+.contact-form {
+	display: grid;
+	gap: 7px;
+	margin-top: 20px;
+}
+
+.contact-form label {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+	width: 100%;
+	padding: 9px;
+	border: 1px solid var(--border-pink);
+	border-radius: 7px;
+	background-color: #fffdfc;
+	font-family: inherit;
+}
+
+.contact-form textarea {
+	resize: vertical;
+}
+
+.contact-form button {
+	justify-self: end;
+	margin-top: 15px;
+	padding: 10px 16px;
+
+	color: white;
+	background-color: var(--accent-pink);
+	border: none;
+	border-radius: 999px;
+
+	font-family: inherit;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.contact-form button:hover {
+	background-color: var(--accent-pink-dark);
+}
+
+.project-window {
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1000px;
+
+	background-color: var(--window-background);
+	border: 1px solid var(--border-pink);
+	border-radius: 14px;
+	box-shadow: 0 10px 25px var(--shadow-pink);
+	overflow: hidden;
+}
+
+.project-content {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 14px;
+	padding: 20px 17px 16px;
+}
+
+.project-card {
+	overflow: hidden;
+	border: 1px solid var(--border-pink);
+	border-radius: 9px;
+	background-color: #fffdfc;
+	text-align: center;
+}
+
+.project-card img {
+	display: block;
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.project-card h3 {
+	margin: 10px 6px 3px;
+	font-size: 14px;
+}
+
+.project-card p {
+	margin: 0 6px 11px;
+	color: var(--text-soft);
+	font-size: 12px;
+}
+
+.project-dots {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	padding-bottom: 12px;
+}
+
+.project-dot {
+	width: 10px;
+	height: 10px;
+	padding: 0;
+
+	border: 1px solid var(--accent-pink);
+	border-radius: 50%;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.project-dot.active {
+	background-color: var(--accent-pink);
+}
+
+.pink-text {
+	color: var(--accent-pink);
+}
+
+.bold-text {
+	font-weight: bold;
 }
 
 .hidden {
