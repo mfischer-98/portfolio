@@ -15,13 +15,13 @@
 		</header>
 		<main>
 			<!-- Welcome window -->
-			<section class="welcome-window">
+			<section class="welcome-window window" id="welcome-window">
 				<section class="window-top-bar">
 					<section class="window-title">
 						<p>welcome.exe</p>
 						</section>
 					<section class="close-button">
-						<button type="button">X</button>
+						<button type="button" id="welcome-close">X</button>
 						</section>
 				</section>
 				<section class="welcome-content">
@@ -29,26 +29,28 @@
 					<p>Feel free to click on the icons and explore ✨</p>
 					</section>
 				<section class="welcome-button">
-					<button type="button">Let's go!</button>
+					<button type="button" id="lets-close">Let's go!</button>
 				</section>
 			</section>
 
 			<!-- Navigation Icons -->
-			<section class="background-icons">
-				<img src="images/icons/rep_projects.png" alt="">
-				<img src="images/icons/rep_profile.png" alt="">
-				<img src="images/icons/rep_resume.png" alt="">
-				<img src="images/icons/rep_contact.png" alt="">
+			<section class="icons">
+				<section class="background-icons">
+					<img src="images/icons/rep_projects.png" class="project-icon" alt="">
+					<img src="images/icons/rep_profile.png" class="profile-icon" alt="">
+					<img src="images/icons/rep_resume.png" class="resume-icon" alt="">
+					<img src="images/icons/rep_contact.png" class="contact-icon" alt="">
+				</section>
 			</section>
 
 			<!-- Projects window -->
-			<section class="project-window">
+			<section class="project-window hidden window" id="project-window">
 				<section class="window-top-bar">
 					<section class="window-title">
 						<p>My projects</p>
 					</section>
 					<section class="close-button">
-						<button type="button">X</button>
+						<button type="button" id="project-close">X</button>
 					</section>
 				</section>
 
@@ -72,11 +74,6 @@
 				<p>Project description</p>
 				</article>
 
-				<article class="project-card">
-				<img src="images/rep_project_img.jpg" alt="">
-				<h3>Last feather</h3>
-				<p>Project description</p>
-				</article>
 			</section>	
 			<section class="project-dots" aria-label="Project pages">
 				<button class="project-dot active" type="button" aria-label="Project page 1"></button>
@@ -85,14 +82,14 @@
 			</section>
 			</section> 
 
-			<section class="profile-window hidden">
+			<section class="profile-window hidden window" id="profile-window">
 			<!-- Profile window -->
 				<section class="window-top-bar">
 					<section class="window-title">
 						<p>About me</p>
 					</section>
 					<section class="close-button">
-						<button type="button">X</button>
+						<button id="profile-close" type="button">X</button>
 					</section>
 				</section>
 				<section class="profile-content">
@@ -103,17 +100,16 @@
 						<p><span class="bold-text">Let's build something amazing together! <span class="pink-text">♡</span></span></p>
 					</section>
 				</section>
-				</section>
 			</section>
 
 			<!-- Resume window -->
-			<section class="resume-window hidden">
+			<section class="resume-window hidden window" id="resume-window">
 				<section class="window-top-bar">
 					<section class="window-title">
 						<p>My resume</p>
 					</section>
 					<section class="close-button">
-						<button type="button">X</button>
+						<button type="button" id="resume-close">X</button>
 					</section>
 				</section>
 				<section class="resume-content">
@@ -123,13 +119,13 @@
 			</section> 
 
 			<!-- Contact window -->
-			<section class="contact-window">
+			<section class="contact-window hidden window" id="contact-window">
 				<section class="window-top-bar">
 					<section class="window-title">
 						<p>Get in touch</p>
 					</section>
 					<section class="close-button">
-						<button type="button">X</button>
+						<button type="button" id="contact-close">X</button>
 					</section>
 				</section>
 				<section class="contact-content">
@@ -158,7 +154,7 @@
 								<label for="email">Your e-mail:</label><br>
 								<input type="text" id="email" name="email"><br>
 								<label for="message">Message:</label><br>
-								<input type="text" id="message" name="message"><br>
+								<textarea name="message" id="message" rows="5"></textarea>
 								<button type="submit">Send message ➤</button>
 							</form>
 							</section>
@@ -170,12 +166,36 @@
 
 		<nav>
 			<!-- Bottom dock -->
-			<img src="images/icons/rep_menu.png" alt="">
-			<img src="images/icons/rep_projects.png" alt="">
-			<img src="images/icons/rep_profile.png" alt="">
-			<img src="images/icons/rep_resume.png" alt="">
-			<img src="images/icons/rep_contact.png" alt="">
+			<section class="icons">
+				<section class="nav-icons">
+					<img src="images/icons/rep_menu.png" class="menu-icon" alt="">
+					<img src="images/icons/rep_projects.png" class="project-icon" alt="">
+					<img src="images/icons/rep_profile.png" class="profile-icon" alt="">
+					<img src="images/icons/rep_resume.png" class="resume-icon" alt="">
+					<img src="images/icons/rep_contact.png" class="contact-icon" alt="">
+					<a href="https://github.com/mfischer-98" target="profile github">
+						<img src="images/icons/rep_github.png" class="github-icon" alt="">
+					</a>
+					<a href="https://www.linkedin.com/in/-melissa-fischer/" target="profile linkedin">
+						<img src="images/icons/rep_linkedin.png" class="linkedin-icon" alt="">
+					</a>
+				</section>
+			</section>
+			<section class="menu-window hidden" id="menu-window">
+				<section class="window-top-bar">
+					<section class="window-title">
+						<p>Menu</p>
+					</section>
+					<section class="close-button">
+						<button type="button" id="menu-close">X</button>
+					</section>
+				</section>
+				<p class="menu-content">
+						Soon there will be more to see here ✨
+					</p>
+				</section>
+			</nav>
 		</nav>
-		<script src="scripts.js"></script>
+		<script src="script.js"></script>
 	</body>
 </html>
