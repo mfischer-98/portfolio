@@ -1,12 +1,7 @@
 
-/*	2 - menu pop up
-	3 - message button works
-
-	3- able to move windows by clicking on top, except message
-	4 - menu shows extra stuff (games, art projects)
-*/
-
-//alert("script.js is connected");
+/* TO DO:
+	- able to drag windows by clicking on top, except message
+	- menu shows extra stuff (games, art projects) */
 
 const windows = document.querySelectorAll(".window");
 
