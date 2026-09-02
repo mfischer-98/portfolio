@@ -277,7 +277,7 @@ header img {
 .contact-window {
 	position: fixed;
 	right: 25px;
-	bottom: 90px;
+	bottom: 100px;
 
 	width: min(430px, calc(100vw - 24px));
 

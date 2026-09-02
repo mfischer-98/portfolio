@@ -148,13 +148,17 @@
 						</p>
 						</section>
 						<section class="contact-form">
-							<form>
+							<form
+								action="https://formspree.io/f/xdeogwnl"
+								method="POST"
+								id="contact-form"
+								>
 								<label for="name">Your name:</label><br>
-								<input type="text" id="name" name="fname"><br>
+								<input type="text" id="name" name="fname" required><br>
 								<label for="email">Your e-mail:</label><br>
-								<input type="text" id="email" name="email"><br>
+								<input type="text" id="email" name="email" required><br>
 								<label for="message">Message:</label><br>
-								<textarea name="message" id="message" rows="5"></textarea>
+								<textarea name="message" id="message" rows="5" required></textarea>
 								<button type="submit">Send message ➤</button>
 							</form>
 							</section>
