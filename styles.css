@@ -37,8 +37,9 @@ body {
 }
 
 main {
+	position: relative;
 	height: calc(100vh - 60px);
-	background-image: url("images/port_prototype_pink3.png");
+	background-image: url("images/background.png");
 	background-size: 100% 100%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -50,19 +51,23 @@ header {
 	background-color: #AD818A;
 	height: 60px;
 	padding: 0 28px;
+	gap: 10px;
+}
+
+header img {
+	width: 56px;
+	height: 56px;
+	object-fit: contain;
+	flex-shrink: 0;
+	transform: scale(1.3);
 }
 
 header h1 {
 	margin: 0;
-	color : #fff8f3;
+	color: #fff8f3;
 	font-size: large;
 	font-weight: 500;
 	letter-spacing: 1px;
-}
-
-header img {
-	width: 60px;
-	height: 40px;
 }
 
 /* clamp allows vlaues to scale and justify-content spreads the icons through the available vertical space*/
@@ -76,10 +81,25 @@ header img {
 	left: clamp(18px, 5vw, 80px);
 }
 
+.item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	align-items: center;
+}
+
 .background-icons img {
 	width: clamp(55px, 9vh, 100px);
 	height: auto;
-	object-fit: contain;}
+	object-fit: contain;
+}
+
+.background-icons p {
+	margin: 8px 0 0;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 16px;
+	font-weight: bold;
+}
 
 .icons img {
 	cursor: pointer;
@@ -186,8 +206,8 @@ header img {
 
 .profile-window {
 	position: absolute;
-	top: 120px;
-	left: 1000px;
+	top: 10%;
+	left: 50%;
 	width: 493px;
 	min-height: 360px;
 
@@ -385,7 +405,7 @@ header img {
 
 .project-window {
 	position: absolute;
-	top: 100px;
+	top: 40%;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 1000px;
