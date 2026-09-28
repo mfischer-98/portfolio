@@ -25,6 +25,64 @@ function closeWelcome() {
 welcomeClose.addEventListener("click", closeWelcome);
 letsClose.addEventListener("click", closeWelcome);
 
+/* DRAGGABLE WINDOWS */
+// Keep track of which window is being dragged and how far the pointer is from its top-left corner.
+const dragState = {
+	windowEl: null,
+	offsetX: 0,
+	offsetY: 0
+};
+
+// Move the active window while the mouse is held down.
+function onDragMove(event) {
+	if (!dragState.windowEl) {
+		return;
+	}
+
+	const nextLeft = event.clientX - dragState.offsetX;
+	const nextTop = event.clientY - dragState.offsetY;
+
+	dragState.windowEl.style.left = `${nextLeft}px`;
+	dragState.windowEl.style.top = `${nextTop}px`;
+}
+
+// Release the drag listeners when the mouse button is released.
+function stopDragging() {
+	window.removeEventListener("mousemove", onDragMove);
+	window.removeEventListener("mouseup", stopDragging);
+	dragState.windowEl = null;
+}
+
+// Only allow dragging on the windows we want to move, and ignore clicks on the close buttons.
+const windowTopBars = document.querySelectorAll(".window-top-bar");
+
+windowTopBars.forEach(function (topbar) {
+	topbar.addEventListener("mousedown", function (event) {
+		if (event.target.closest("button")) {
+			return;
+		}
+
+		const windowEl = topbar.closest(".window");
+		if (!windowEl || windowEl.id === "contact-window") {
+			return;
+		}
+
+		bringToFront(windowEl);
+
+		const rect = windowEl.getBoundingClientRect();
+		dragState.windowEl = windowEl;
+		dragState.offsetX = event.clientX - rect.left;
+		dragState.offsetY = event.clientY - rect.top;
+
+		// Keep the current position and remove the centered transform so the window can be moved freely.
+		windowEl.style.left = `${rect.left}px`;
+		windowEl.style.top = `${rect.top}px`;
+		windowEl.style.transform = "none";
+
+		window.addEventListener("mousemove", onDragMove);
+		window.addEventListener("mouseup", stopDragging);
+	});
+});
 
 /* PROJECT WINDOW */
 const projectsIcons = document.querySelectorAll(".project-icon");

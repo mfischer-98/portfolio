@@ -39,7 +39,7 @@ body {
 main {
 	position: relative;
 	height: calc(100vh - 60px);
-	background-image: url("images/background.png");
+	background-image: url("images/test6.png");
 	background-size: 100% 100%;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -48,7 +48,7 @@ main {
 header {
 	display: flex;
 	align-items: center;
-	background-color: #AD818A;
+	background-color: #49404B;
 	height: 60px;
 	padding: 0 28px;
 	gap: 10px;
@@ -124,12 +124,18 @@ header h1 {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	cursor: grab;
+	user-select: none;
 
 	height: 42px;
 	padding: 0 16px;
 
 	background-color: var(--window-titlebar);
 	border-bottom: 1px solid var(--border-pink);
+}
+
+.window-top-bar:active {
+	cursor: grabbing;
 }
 
 .welcome-content {
@@ -205,9 +211,10 @@ header h1 {
 }
 
 .profile-window {
-	position: absolute;
+	position: fixed;
 	top: 10%;
 	left: 50%;
+	transform: translateX(-50%);
 	width: 493px;
 	min-height: 360px;
 
@@ -245,7 +252,7 @@ header h1 {
 
 .resume-window {
 	position: fixed;
-	top: 47%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: min(1100px, calc(100vw - 120px));
@@ -404,7 +411,7 @@ header h1 {
 }
 
 .project-window {
-	position: absolute;
+	position: fixed;
 	top: 40%;
 	left: 50%;
 	transform: translateX(-50%);
