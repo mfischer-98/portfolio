@@ -25,9 +25,15 @@
 						</section>
 				</section>
 				<section class="welcome-content">
-					<h2>Hey there! My name is Melissa and welcome to my portfolio.</h2>
-					<p>Feel free to click on the icons and explore ✨</p>
-					</section>
+					<div class="welcome-intro">
+						<h2>Hey there! I'm Melissa and welcome to my portfolio ✨</h2>
+						<p> I’m a programming student at 42 Porto with a background in biology and animation. 
+							I enjoy building projects that combine logical problem-solving with creativity.</p>
+					</div>
+					<aside class="welcome-status">
+						<span class="status-label">CURRENTLY LOOKING FOR</span>
+						<p>Internship or junior opportunities in software development.</p></aside>
+				</section>
 				<section class="welcome-button">
 					<button type="button" id="lets-close">Let's go!</button>
 				</section>
@@ -56,7 +62,7 @@
 			</section>
 
 			<!-- Projects window -->
-			<section class="project-window hidden window" id="project-window">
+			<section class="project-window window" id="project-window">
 				<section class="window-top-bar">
 					<section class="window-title">
 						<p>My projects</p>
@@ -69,21 +75,36 @@
 			<section class="project-content">
 			<!-- Project card -->
 				<article class="project-card">
-					<img src="images/rep_project_img.jpg" alt="">
-					<h3>Cube3D</h3>
-					<p>Project description</p>
+					<img src="images/so-long.png" alt="">
+					<h3>so_long</h3>
+					<p>A top-down 2D graphical game focused on game loop basics and map validation.</p>
+					<div class="project-tags">
+						<span class="project-tag">C</span>
+						<span class="project-tag">MiniLibX</span>
+						<span class="project-tag">Event Handling</span>
+					</div>
 				</article>
 			
 				<article class="project-card">
-					<img src="images/rep_project_img.jpg" alt="">
+					<img src="images/minishell.png" alt="">
 					<h3>Minishell</h3>
-					<p>Project description</p>
+					<p>A shell built in C with parsing, pipes, redirections, processes and signal handling.</p>
+					<div class="project-tags">
+						<span class="project-tag">C</span>
+						<span class="project-tag">Shell</span>
+						<span class="project-tag">Parsing</span>
+					</div>
 				</article>
 
 				<article class="project-card">
-				<img src="images/rep_project_img.jpg" alt="">
-				<h3>Philosophers</h3>
-				<p>Project description</p>
+					<img src="images/last-feather.png" alt="">
+					<h3>Final Feather</h3>
+					<p>Game project in Unity made by a team in GameDev Club.</p>
+					<div>
+						<span class="project-tag">Unity</span>
+						<span class="project-tag">C#</span>
+						<span class="project-tag">Gameplay Logic</span>
+					</div>
 				</article>
 
 			</section>	
@@ -146,18 +167,15 @@
 
 						<section>
 							<strong>Melissa</strong>
-							<p>Available</p>
+							<p>Available for opportunities</p>
+							<p1 class="email">✉ melissafischer.info@proton.me</p1>
+							<span class="copy-feedback" aria-live="polite"></span>
 						</section>
 						</section>
 
-						<section class="chat-messages">
-						<p class="chat-bubble chat-bubble-sent">
-							Hi! I love your work ✨
-						</p>
-
-						<p class="chat-bubble chat-bubble-received">
-							Thank you so much! I'd love to hear about any opportunities.
-						</p>
+						<section class="chat-message">
+						<h1>Professional enquiries</h1>
+						<p>I'm currently exploring internship and junior-level opportunities in QA and software development. Please use the form below to get in touch.</p>
 						</section>
 						<section class="contact-form">
 							<form
@@ -169,7 +187,7 @@
 								<input type="text" id="name" name="fname" required><br>
 								<label for="email">Your e-mail:</label><br>
 								<input type="text" id="email" name="email" required><br>
-								<label for="message">Message:</label><br>
+								<label for="message">Your message:</label><br>
 								<textarea name="message" id="message" rows="5" required></textarea>
 								<button type="submit">Send message ➤</button>
 							</form>

@@ -186,3 +186,20 @@ function closeMenu() {
 menuIcon.addEventListener("click", openMenu);
 menuClose.addEventListener("click", closeMenu);
 
+const email = document.querySelector(".email");
+const feedback = document.querySelector(".copy-feedback");
+
+email.addEventListener("click", async () => {
+	const emailAddress = email.textContent
+		.replace("✉", "")
+		.trim();
+
+	try {
+		await navigator.clipboard.writeText(emailAddress);
+		feedback.textContent = "Copied!";
+		setTimeout(() => {feedback.textContent = "";}, 500);
+	} catch (error) {
+		feedback.textContent = "Copy failed";
+		setTimeout(() => {feedback.textContent = "";}, 500);
+	}
+});
