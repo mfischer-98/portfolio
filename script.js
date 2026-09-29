@@ -223,35 +223,35 @@ const projectDetails = {
 	"so_long": {
 		title: "so_long",
 		description: "so_long is my first game project at 42, developed individually in C using MiniLibX, without a game engine. You play as Max, a pug collecting lost socks around a messy house and finding your way to his bed. I implemented map parsing and validation, player movement, event handling, rendering, and win conditions. I also created the game’s 2D art and animations, including different character states and a reactive cat enemy.",
-		video: "",
+		video: "videos/so_long.mp4",
 		repository: "https://github.com/mfischer-98/So_long"
 	},
 
 	"minishell": {
 		title: "Minishell",
 		description: "Minishell is a Unix shell built from scratch in C as a two-person project at 42, designed to explore how command-line shells work. It supports command execution, pipes, quotes, redirections, heredocs, and environment variables. My main contributions included implementing the export, unset, and env built-ins, input/output redirections (<, >, >>), heredocs (<<), and signal handling for Ctrl+C and Ctrl+D.",
-		video: "",
+		video: "videos/minishell.mp4",
 		repository: "https://github.com/mfischer-98/Minishell"
 	},
 
 	"final-feather": {
 		title: "Final Feather",
 		description: "The Final Feather is a team-developed game created in Unity. I implemented the player movement logic and sourced, imported, and set up character and enemy assets, including their animations. I also collaborated with a teammate to design the skill selection cards players choose from as they defeat waves of enemies.",
-		video: "",
+		video: "videos/final-feather.mp4",
 		repository: "https://github.com/DadiaZ24/The-Final-Feather-game-"
 	},
 
 	"cub3d": {
 		title: "Cub3D",
 		description: "Cub3D is a team project inspired by Wolfenstein 3D, exploring ray-casting to create a first-person view of a maze. I coordinated task planning and tracking through GitHub Issues, while also contributing to map parsing and ray-casting logic. I also created the game’s visuals in Clip Studio Paint.  ",
-		video: "",
+		video: "videos/cub3D.mp4",
 		repository: "https://github.com/mfischer-98/cub3D"
 	},
 
 	"philosophers": {
 		title: "Philosophers",
 		description: "Philosophers is an individual C project based on the classic dining philosophers problem, where several philosophers share a limited number of forks and must coordinate to eat without causing deadlocks or starvation. My solution staggered the start of philosophers based on whether their ID was odd or even, and used a monitoring thread to track their states and detect when a philosopher had died.",
-		video: "",
+		video: "videos/philo.mp4",
 		repository: "https://github.com/mfischer-98/Philosophers"
 	}
 };
