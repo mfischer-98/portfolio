@@ -71,49 +71,110 @@
 						<button type="button" id="project-close">X</button>
 					</section>
 				</section>
+			<section class="project-track">
 
-			<section class="project-content">
-			<!-- Project card -->
-				<article class="project-card">
-					<img src="images/so-long.png" alt="">
-					<h3>so_long</h3>
-					<p>A top-down 2D graphical game focused on game loop basics and map validation.</p>
-					<div class="project-tags">
-						<span class="project-tag">C</span>
-						<span class="project-tag">MiniLibX</span>
-						<span class="project-tag">Event Handling</span>
-					</div>
-				</article>
-			
-				<article class="project-card">
-					<img src="images/minishell.png" alt="">
-					<h3>Minishell</h3>
-					<p>A shell built in C with parsing, pipes, redirections, processes and signal handling.</p>
-					<div class="project-tags">
-						<span class="project-tag">C</span>
-						<span class="project-tag">Shell</span>
-						<span class="project-tag">Parsing</span>
-					</div>
-				</article>
-
-				<article class="project-card">
-					<img src="images/last-feather.png" alt="">
-					<h3>Final Feather</h3>
-					<p>Game project in Unity made by a team in GameDev Club.</p>
-					<div>
-						<span class="project-tag">Unity</span>
-						<span class="project-tag">C#</span>
-						<span class="project-tag">Gameplay Logic</span>
-					</div>
-				</article>
-
-			</section>	
-			<section class="project-dots" aria-label="Project pages">
-				<button class="project-dot active" type="button" aria-label="Project page 1"></button>
-				<button class="project-dot" type="button" aria-label="Project page 2"></button>
-				<button class="project-dot" type="button" aria-label="Project page 3"></button>
+				<section class="project-content">
+				<!-- Project card -->
+					<article class="project-card" data-project="so_long" role="button" tabindex="0" aria-label="View so_long project">
+						<img src="images/so-long.png" alt="">
+						<h3>so_long</h3>
+						<p>A top-down 2D graphical game focused on game loop basics and map validation.</p>
+						<div class="project-tags">
+							<span class="project-tag">C</span>
+							<span class="project-tag">MiniLibX</span>
+							<span class="project-tag">Event Handling</span>
+						</div>
+					</article>
+				
+					<article class="project-card" data-project="minishell" role="button" tabindex="0" aria-label="View Minishell project">
+						<img src="images/minishell.png" alt="">
+						<h3>Minishell</h3>
+						<p>A shell built in C with parsing, pipes, redirections, processes and signal handling.</p>
+						<div class="project-tags">
+							<span class="project-tag">C</span>
+							<span class="project-tag">Shell</span>
+							<span class="project-tag">Parsing</span>
+						</div>
+					</article>
+	
+					<article class="project-card" data-project="final-feather" role="button" tabindex="0" aria-label="View Final Feather project">
+						<img src="images/last-feather.png" alt="">
+						<h3>Final Feather</h3>
+						<p>Game project in Unity made by a team in GameDev Club.</p>
+						<div>
+							<span class="project-tag">Unity</span>
+							<span class="project-tag">C#</span>
+							<span class="project-tag">Gameplay Logic</span>
+						</div>
+					</article>
+				</section>
+	
+				<section class="project-content">
+					<article class="project-card" data-project="cub3d" role="button" tabindex="0" aria-label="View Cub3D project">
+						<img src="images/cub3D.png" alt="">
+						<h3>Cub3D</h3>
+						<p>A 3D engine project focused on raycasting, rendering and spatial logic in C.</p>
+						<div>
+							<span class="project-tag">C</span>
+							<span class="project-tag">Raycasting</span>
+							<span class="project-tag">Graphics programming</span>
+						</div>
+					</article>
+					<article class="project-card" data-project="philosophers" role="button" tabindex="0" aria-label="View Philosophers project">
+						<img src="images/philo.png" alt="">
+						<h3>Philosophers</h3>
+						<p>A concurrency project about threads and mutexes.</p>
+						<div>
+							<span class="project-tag">C</span>
+							<span class="project-tag">Multithreading</span>
+						</div>
+					</article>
+				</section>
 			</section>
-			</section> 
+
+			<section class="project-dots" aria-label="Project pages">
+				<button class="project-dot active" type="button" aria-label="Project page 1 to 3"></button>
+				<button class="project-dot" type="button" aria-label="Project page 3 to 5"></button>
+			</section>
+			</section>
+
+			<div class="project-detail-backdrop" id="project-detail-backdrop" hidden>
+	<section class="project-detail window"
+			 role="dialog"
+			 aria-modal="true"
+			 aria-labelledby="detail-title">
+
+		<div class="window-top-bar">
+			<div class="window-title">
+				<p>project.exe</p>
+			</div>
+
+			<button type="button"
+					class="detail-close"
+					id="detail-close"
+					aria-label="Close project details">X</button>
+		</div>
+
+		<div class="project-detail-content">
+			<h2 id="detail-title"></h2>
+
+			<div class="detail-video" id="detail-video">
+				<iframe id="detail-video-frame"
+						title="Project video"
+						src=""
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen></iframe>
+			</div>
+
+			<p id="detail-description"></p>
+
+			<a id="detail-repository"
+				href=""
+				target="_blank"
+				rel="noopener noreferrer">View GitHub repository ↗</a>
+		</div>
+	</section>
+</div>
 
 			<section class="profile-window hidden window" id="profile-window">
 			<!-- Profile window -->
