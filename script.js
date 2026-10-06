@@ -93,7 +93,7 @@ const projectsClose = document.querySelector("#project-close");
 function openProject() {
 	projectsWindow.classList.remove("hidden");
 	bringToFront(projectsWindow);
-}
+}	
 
 function closeProject() {
 	projectsWindow.classList.add("hidden");
@@ -104,6 +104,7 @@ projectsIcons.forEach(function (oneProjectIcon) {
 });
 
 projectsClose.addEventListener("click", closeProject);
+
 
 
 /* PROFILE WINDOW */
@@ -264,7 +265,7 @@ const detailVideoFrame = document.querySelector("#detail-video-frame");
 const detailRepository = document.querySelector("#detail-repository");
 const detailClose = document.querySelector("#detail-close");
 
-function openProject(projectKey) {
+function openProjectDetails(projectKey) {
 	const project = projectDetails[projectKey];
 	if (!project) return;
 
@@ -284,34 +285,137 @@ function openProject(projectKey) {
 	detailClose.focus();
 }
 
-function closeProject() {
+function closeProjectDetail() {
 	detailBackdrop.hidden = true;
 	detailVideoFrame.src = ""; // stops the video when the window closes
 }
 
 document.querySelectorAll(".project-card[data-project]").forEach((card) => {
 	card.addEventListener("click", () => {
-		openProject(card.dataset.project);
+		openProjectDetails(card.dataset.project);
 	});
 
 	card.addEventListener("keydown", (event) => {
 		if (event.key === "Enter" || event.key === " ") {
 			event.preventDefault();
-			openProject(card.dataset.project);
+			openProjectDetails(card.dataset.project);
 		}
 	});
 });
 
-detailClose.addEventListener("click", closeProject);
+detailClose.addEventListener("click", closeProjectDetail);
 
 detailBackdrop.addEventListener("click", (event) => {
 	if (event.target === detailBackdrop) {
-		closeProject();
+		closeProjectDetail();
 	}
 });
 
 document.addEventListener("keydown", (event) => {
 	if (event.key === "Escape" && !detailBackdrop.hidden) {
-		closeProject();
+		closeProjectDetail();
 	}
 });
+
+
+/* ART AND GAME WINDOWS */
+
+const galleryWindowElement = document.querySelector("#gallery-window");
+const gameWindowElement = document.querySelector("#game-window");
+
+// Open the art gallery
+document.querySelector("#open-art").addEventListener("click", () => {
+	galleryWindowElement.classList.remove("hidden");
+	bringToFront(galleryWindowElement);
+});
+
+// Open the Scratch game
+document.querySelector("#open-game").addEventListener("click", () => {
+	gameWindowElement.classList.remove("hidden");
+	bringToFront(gameWindowElement);
+});
+
+
+// Close the art gallery
+document.querySelector("#gallery-close").addEventListener("click", () => {
+	galleryWindowElement.classList.add("hidden");
+});
+
+// Close the game window
+document.querySelector("#game-close").addEventListener("click", () => {
+	gameWindowElement.classList.add("hidden");
+});
+
+
+
+/* ART GALLERY NAVIGATION */
+
+const artworks = [
+	{
+		type: "image",
+		src: "images/art/arcade.png",
+		description: "My first finalized original made on ClipStudioPaint."
+	},
+	{
+		type: "gif",
+		src: "images/art/walking_2.gif"
+	},
+	{
+		type: "video",
+		src: "images/art/Halloween.mp4"
+	}
+];
+
+let currentArt = 0;
+
+const artDescription = document.querySelector("#art-description");
+const galleryImage = document.querySelector("#gallery-image");
+const galleryVideo = document.querySelector("#gallery-video");
+const galleryPlaceholder = document.querySelector("#gallery-placeholder");
+const artCounter = document.querySelector("#art-counter");
+
+function showArtwork() {
+	galleryImage.hidden = true;
+	galleryVideo.hidden = true;
+	galleryVideo.pause();
+	galleryVideo.removeAttribute("src");
+
+	if (artworks.length === 0) {
+		galleryPlaceholder.hidden = false;
+		artCounter.textContent = "0 / 0";
+		return;
+	}
+
+	const artwork = artworks[currentArt];
+	artDescription.textContent = artwork.description;
+
+	galleryPlaceholder.hidden = true;
+
+	if (artwork.type === "image" || artwork.type === "gif") {
+		galleryImage.src = artwork.src;
+		galleryImage.alt = `Artwork ${currentArt + 1}`;
+		galleryImage.hidden = false;
+	} else if (artwork.type === "video") {
+		galleryVideo.src = artwork.src;
+		galleryVideo.hidden = false;
+	}
+
+	artCounter.textContent =
+		`${currentArt + 1} / ${artworks.length}`;
+}
+
+document.querySelector("#art-prev").addEventListener("click", () => {
+	if (artworks.length === 0) return;
+
+	currentArt = (currentArt - 1 + artworks.length) % artworks.length;
+	showArtwork();
+});
+
+document.querySelector("#art-next").addEventListener("click", () => {
+	if (artworks.length === 0) return;
+
+	currentArt = (currentArt + 1) % artworks.length;
+	showArtwork();
+});
+
+showArtwork();

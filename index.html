@@ -176,8 +176,9 @@
 	</section>
 </div>
 
+			
 			<section class="profile-window hidden window" id="profile-window">
-			<!-- Profile window -->
+				<!-- Profile window -->
 				<section class="window-top-bar">
 					<section class="window-title">
 						<p>About me</p>
@@ -186,15 +187,88 @@
 						<button id="profile-close" type="button">X</button>
 					</section>
 				</section>
+
 				<section class="profile-content">
-				<img src="images/rep_aboutme.png" alt="">
-					<section class="profile-text">
-						<p> I'm a <span class="bold-text">creative developer</span> who loves crafting pretty and functional <span class="pink-text"><span class="bold-text">digital experiences</span></span>.</p>
-						<p> When I'm not coding, you'll find me drawing, gaming or exploring new places. </p>
-						<p><span class="bold-text">Let's build something amazing together! <span class="pink-text">♡</span></span></p>
+
+					<div class="profile-intro">
+						<img src="images/profile 1.png" alt="Melissa">
+
+						<section class="profile-text">
+							<p>
+								I'm studying <span class="bold-text">software engineering at 42 Porto</span>,
+								where I work on projects in C focused on problem-solving, algorithms and
+								systems programming. Alongside my studies, I lead 2D animation workshops
+								at TUMO and take part in the 42 GameDev Club.
+							</p>
+							<p>
+								I have a background in biology and animation, with experience in both 
+								research and creative studios. I'm now focused on developing my software engineering 
+								skills through hands-on projects, with a growing interest in <span class="bold-text">
+								backend development, software testing and automation.
+								</span>
+							</p>
+						</section>
+					</div>
+
+					<section class="profile-info">
+						<section class="profile-currently">
+							<h3>💻 Currently</h3>
+							<ul>
+								<li>Leading animation workshops at TUMO</li>
+								<li>Building software engineering projects at 42 Porto</li>
+								<li>Taking part in the 42 GameDev Club</li>
+								<li>Learning QA and software testing through Coursera</li>
+							</ul>
+						</section>
+
+						<section class="profile-interests">
+							<h3>🌸 Interests</h3>
+								<ul>
+									<li>Drawing</li>
+									<li>Playing video games</li>
+									<li>Yoga, Pilates and rollerskating</li>
+									<li>Baking</li>
+								</ul>
+						</section>
 					</section>
+
+					<section class="profile-journey">
+						<h3>My journey</h3>
+
+						<div class="timeline">
+							<div class="timeline-item">
+								<span class="timeline-title">Biology</span>
+								<p>University of Aveiro</p>
+								<p>Biochemistry & Proteomics Lab Internship</p>
+							</div>
+
+							<div class="timeline-item">
+								<span class="timeline-title">2D & 3D Animation</span>
+								<p>IEFP Vila Nova de Gaia</p>
+								<p>Animanostra Studio Internship</p>
+							</div>
+
+							<div class="timeline-item">
+								<span class="timeline-title">Game Development</span>
+								<p>Semaeopus Game Studio Internship </p>
+							</div>
+
+							<div class="timeline-item">
+								<span class="timeline-title">WorldSkills Portugal</span>
+								<p>1st Place - 3D Modelling & Augmented Reality</p>
+							</div>
+
+							<div class="timeline-item">
+								<span class="timeline-title">TUMO & 42 Porto</span>
+								<p>Animation Workshop Leader</p>
+								<p>Software Engineering Projects GameDev Club</p>
+							</div>
+						</div>
+					</section>
+
 				</section>
 			</section>
+
 
 			<!-- Resume window -->
 			<section class="resume-window hidden window" id="resume-window">
@@ -216,7 +290,7 @@
 			<section class="contact-window hidden window" id="contact-window">
 				<section class="window-top-bar">
 					<section class="window-title">
-						<p>Get in touch</p>
+						<p>Contact me</p>
 					</section>
 					<section class="close-button">
 						<button type="button" id="contact-close">X</button>
@@ -275,21 +349,102 @@
 					</a>
 				</section>
 			</section>
+
+
+
 			<section class="menu-window hidden" id="menu-window">
+
 				<section class="window-top-bar">
 					<section class="window-title">
-						<p>Menu</p>
+						<p>Extras</p>
 					</section>
+
 					<section class="close-button">
 						<button type="button" id="menu-close">X</button>
 					</section>
 				</section>
-				<p class="menu-content">
-						Soon there will be more to see here ✨
-					</p>
+
+				<div class="menu-profile">
+					<img src="images/icons/icon_profile2.png" alt="Profile photo">
+
+					<div class="menu-profile-info">
+						<h3>Melissa Fischer</h3>
+						<p>Software Engineer</p>
+					</div>
+				</div>
+
+				<div class="menu-icons">
+
+					<button type="button" class="menu-item" id="open-art">
+						<img src="images/icons/icon_art.png" alt="">
+						<span>My Art</span>
+					</button>
+
+					<button type="button" class="menu-item" id="open-game">
+						<img src="images/icons/icon_game.png" alt="">
+						<span>Game</span>
+					</button>
+
+				</div>
+
+			</section>
+
+
+			<!-- ART GALLERY WINDOW -->
+			<section class="window gallery-window hidden" id="gallery-window">
+				<section class="window-top-bar">
+					<section class="window-title">
+						<p>My Art</p>
+					</section>
+
+					<section class="close-button">
+						<button type="button" id="gallery-close">X</button>
+					</section>
 				</section>
-			</nav>
-		</nav>
-		<script src="script.js"></script>
-	</body>
+
+				<div class="gallery-content">
+					<button type="button" id="art-prev"
+							aria-label="Previous artwork">&#10094;</button>
+
+					<div class="artwork-display">
+						<img id="gallery-image" src="" alt="" hidden>
+						<video id="gallery-video" controls loop hidden></video>
+						<p id="gallery-placeholder">My artwork gallery is coming soon ✨</p>
+						<p id="art-description"></p>
+					</div>
+
+
+					<button type="button" id="art-next"
+							aria-label="Next artwork">&#10095;</button>
+				</div>
+
+				<p id="art-counter">0 / 0</p>
+			</section>
+
+
+					<!-- SCRATCH GAME WINDOW -->
+					<section class="window game-window hidden" id="game-window">
+						<section class="window-top-bar">
+							<section class="window-title">
+								<p>Strawberry Madness</p>
+							</section>
+							<section class="close-button">
+								<button type="button" id="game-close">X</button>
+							</section>
+						</section>
+
+						<div class="game-content">
+							<iframe
+								src="https://scratch.mit.edu/projects/1179118951/embed"
+								allowtransparency="true"
+								width="960"
+								height="795"
+								frameborder="0"
+								scrolling="no"
+								allowfullscreen>
+							</iframe>
+						</div>
+					</section>
+						<script src="script.js"></script>
+					</body>
 </html>
